@@ -1,0 +1,458 @@
+<!-- =====================================================
+GRUPO GH — WEBSITE INSTITUCIONAL (UPDATED VERSION)
+Humanizado • Profissional • Agência Real
+===================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grupo GH | Marketing & Tráfego Pago</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- ICONS -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+
+/* =====================
+BASE
+===================== */
+
+:root{
+--dark:#0B3C5D;
+--soft:#4FA3FF;
+--gray:#f5f7fa;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+background:#fff;
+color:#1c1c1c;
+line-height:1.7;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 20px;
+}
+
+section{
+padding:90px 0;
+}
+
+h1{font-size:42px;font-weight:600;margin-bottom:20px;}
+h2{font-size:30px;margin-bottom:25px;color:var(--dark);}
+h3{font-size:20px;margin-bottom:10px;font-weight:500;}
+
+p{opacity:.85;}
+
+.gray{background:var(--gray);}
+
+/* =====================
+NAVBAR
+===================== */
+
+header{
+position:sticky;
+top:0;
+background:#fff;
+border-bottom:1px solid #eee;
+z-index:999;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+color:var(--dark);
+}
+
+.menu a{
+margin-left:22px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+.menu a:hover{color:var(--soft);}
+
+/* =====================
+HERO
+===================== */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(180deg,#ffffff,#f7fbff);
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+border-radius:8px;
+background:var(--dark);
+color:#fff;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+.btn:hover{
+background:var(--soft);
+}
+
+/* =====================
+CARDS
+===================== */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+}
+
+.card{
+background:#fff;
+padding:28px;
+border-radius:10px;
+border:1px solid #eee;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+/* =====================
+PROCESS
+===================== */
+
+.process{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+text-align:center;
+}
+
+/* =====================
+CONTACT
+===================== */
+
+.contact{
+text-align:center;
+}
+
+.social-links{
+margin-top:15px;
+}
+
+.social-links a{
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin:8px 12px;
+text-decoration:none;
+color:var(--dark);
+font-weight:500;
+transition:.3s;
+}
+
+.social-links a:hover{
+color:var(--soft);
+transform:translateY(-2px);
+}
+
+/* =====================
+FOOTER
+===================== */
+
+footer{
+background:#111;
+color:#fff;
+text-align:center;
+padding:40px 20px;
+font-size:14px;
+}
+
+.footer-social a{
+color:#fff;
+margin:0 10px;
+text-decoration:none;
+transition:.3s;
+}
+
+.footer-social a:hover{
+color:var(--soft);
+}
+
+/* =====================
+FLOATING WHATSAPP
+===================== */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+width:56px;
+height:56px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+box-shadow:0 6px 18px rgba(0,0,0,.2);
+z-index:999;
+transition:.3s;
+animation:float 3s ease-in-out infinite;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.08);
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-5px);}
+}
+
+/* =====================
+ANIMATION
+===================== */
+
+.fade{
+opacity:0;
+transform:translateY(25px);
+transition:.9s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<div class="container nav">
+
+<div class="logo">Grupo GH</div>
+
+<nav class="menu">
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#processo">Como Trabalhamos</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="hero fade">
+<div class="container">
+
+<h1>Marketing digital com estratégia, clareza e foco em crescimento.</h1>
+
+<p>
+O Grupo GH ajuda empresas a estruturarem sua presença digital e atraírem novos clientes através do marketing e do tráfego pago.
+</p>
+
+<a href="#servicos" class="btn">Conhecer nossos serviços</a>
+
+</div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="fade">
+<div class="container">
+
+<h2>Sobre o Grupo GH</h2>
+
+<p>
+O Grupo GH é uma empresa de marketing digital dedicada a apoiar empresas locais na construção de uma presença digital sólida e profissional.
+</p>
+
+<br>
+
+<p>
+Nosso trabalho vai além da gestão de anúncios. Atuamos como parceiros estratégicos, organizando canais digitais, estruturando processos de aquisição e acompanhando a evolução de cada negócio de forma próxima e transparente.
+</p>
+
+<br>
+
+<p>
+Acreditamos em crescimento sustentável, decisões baseadas em dados e relacionamento de longo prazo com nossos clientes.
+</p>
+
+</div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="gray fade">
+<div class="container">
+
+<h2>Serviços</h2>
+
+<div class="grid">
+
+<div class="card"><h3>Criação de Landing Pages</h3><p>Páginas modernas para apresentação profissional online.</p></div>
+
+<div class="card"><h3>Google Meu Negócio</h3><p>Configuração e organização da presença local no Google.</p></div>
+
+<div class="card"><h3>Meta Ads</h3><p>Gestão estratégica de campanhas no Instagram e Facebook.</p></div>
+
+<div class="card"><h3>Google Ads</h3><p>Campanhas direcionadas para demandas já existentes.</p></div>
+
+<div class="card"><h3>Gestão de Campanhas</h3><p>Acompanhamento contínuo e otimização técnica.</p></div>
+
+<div class="card"><h3>Análise de Métricas</h3><p>Leitura estratégica de dados para decisões mais seguras.</p></div>
+
+</div>
+
+</div>
+</section>
+
+<!-- COMO TRABALHAMOS -->
+<section id="processo" class="fade">
+<div class="container">
+
+<h2>Como Trabalhamos</h2>
+
+<div class="process">
+
+<div class="card">
+<h3>Entendimento</h3>
+<p>Compreensão do negócio, mercado e objetivos.</p>
+</div>
+
+<div class="card">
+<h3>Estruturação</h3>
+<p>Organização dos canais digitais necessários.</p>
+</div>
+
+<div class="card">
+<h3>Implementação</h3>
+<p>Ativação estratégica das campanhas.</p>
+</div>
+
+<div class="card">
+<h3>Acompanhamento</h3>
+<p>Monitoramento contínuo e evolução constante.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="gray contact fade">
+<div class="container">
+
+<h2>Contato</h2>
+
+<p>Se desejar conversar ou entender melhor como podemos ajudar seu negócio, ficaremos à disposição.</p>
+
+<br>
+
+<p><strong>Telefone:</strong> 16 99752-9606</p>
+
+<div class="social-links">
+
+<a href="https://www.instagram.com/sougabriel.henrique/" target="_blank">
+<i class="fab fa-instagram"></i> Instagram
+</a>
+
+<a href="https://www.linkedin.com/in/gabriel-henrique-3ab7b5171/" target="_blank">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
+
+</div>
+
+<br>
+
+<a class="btn" href="https://wa.me/5516997529606" target="_blank">
+Entrar em contato
+</a>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<p>© Grupo GH — Marketing & Tráfego Pago</p>
+
+<div class="footer-social">
+<a href="https://www.instagram.com/sougabriel.henrique/" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/gabriel-henrique-3ab7b5171/" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+</div>
+
+<p>Todos os direitos reservados</p>
+
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="whatsapp-float"
+href="https://wa.me/5516997529606?text=Olá%20vim%20pela%20landing%20page%20do%20Grupo%20GH%20e%20gostaria%20de%20entender%20melhor%20como%20vocês%20podem%20ajudar%20meu%20negócio."
+target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+
+document.querySelectorAll('.fade').forEach(el=>{
+observer.observe(el);
+});
+</script>
+
+</body>
+</html>
