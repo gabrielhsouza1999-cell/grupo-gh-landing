@@ -1,4 +1,4 @@
-const CACHE_NAME = "grupo-gh-raio-x-v11";
+const CACHE_NAME = "grupo-gh-raio-x-v12";
 const ASSETS = [
   "./",
   "./index.html",
@@ -6,8 +6,8 @@ const ASSETS = [
   "./app.js",
   "./manifest.json",
   "/icons/icon.svg",
-  "/assets/hero-consultoria.png",
-  "/assets/grupo-gh-logo.png",
+  "/hero-consultoria.png",
+  "/grupo-gh-logo.png",
 ];
 
 self.addEventListener("install", (event) => {

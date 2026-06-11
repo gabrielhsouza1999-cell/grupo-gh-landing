@@ -100,7 +100,7 @@ a {
   color: #fff;
   background:
     linear-gradient(90deg, rgba(5, 9, 20, 0.98) 0%, rgba(5, 9, 20, 0.92) 42%, rgba(5, 9, 20, 0.5) 100%),
-    url("/assets/hero-consultoria.png") center right / cover no-repeat,
+    url("/hero-consultoria.png") center right / cover no-repeat,
     var(--navy-950);
 }
 
