@@ -105,8 +105,11 @@ a {
 }
 
 .hero-inner,
+.analyst-inner,
+.deliverables-inner,
 .diagnostic-section,
-.authority-inner {
+.authority-inner,
+.footer-inner {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
 }
@@ -254,8 +257,112 @@ h1 {
   font-size: 0.9rem;
 }
 
+.analyst-section,
+.deliverables-section {
+  padding: 72px 0;
+  background: #fff;
+}
+
+.analyst-inner {
+  display: grid;
+  gap: 26px;
+  align-items: center;
+}
+
+.photo-placeholder {
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(21, 94, 239, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(7, 17, 31, 0.88), rgba(13, 30, 52, 0.72)),
+    url("/grupo-gh-logo.png") center / cover no-repeat;
+  box-shadow: var(--shadow);
+}
+
+.photo-placeholder span {
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(5, 9, 20, 0.68);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.analyst-copy .eyebrow,
+.deliverables-section .eyebrow {
+  color: var(--blue-600);
+}
+
+.analyst-copy h2 {
+  margin-bottom: 16px;
+  color: var(--navy-900);
+  font-size: clamp(1.8rem, 6vw, 3.1rem);
+  line-height: 1.05;
+}
+
+.analyst-copy h3 {
+  margin: 0 0 6px;
+  color: var(--navy-900);
+  font-size: 1.35rem;
+}
+
+.role {
+  margin-bottom: 22px;
+  color: var(--blue-600);
+  font-weight: 900;
+}
+
+.analyst-copy p {
+  color: #475467;
+  line-height: 1.72;
+}
+
+.deliverables-section {
+  background: var(--navy-950);
+}
+
+.deliverables-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.deliverable-card {
+  min-height: 220px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+
+.deliverable-card span {
+  display: inline-grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  background: rgba(141, 187, 255, 0.14);
+  font-size: 1.4rem;
+}
+
+.deliverable-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.12rem;
+}
+
+.deliverable-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.58;
+}
+
 .diagnostic-section {
-  padding: 58px 0;
+  padding: 74px 0;
 }
 
 .section-heading {
@@ -275,6 +382,34 @@ h1 {
 .section-heading p {
   color: rgba(255, 255, 255, 0.72);
   line-height: 1.62;
+}
+
+.important-note {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 22px;
+  padding: 20px;
+  border: 1px solid rgba(141, 187, 255, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.important-note strong {
+  color: var(--blue-300);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.important-note p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.55;
+}
+
+.important-note span {
+  color: #fff;
+  font-weight: 900;
 }
 
 .form-card {
@@ -595,14 +730,79 @@ output {
   fill: currentColor;
 }
 
+.floating-whatsapp::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: calc(100% + 12px);
+  width: max-content;
+  max-width: 180px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--navy-900);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 900;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(6px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
 .floating-whatsapp:hover {
   background: #12954b;
   transform: translateY(-2px);
   box-shadow: 0 22px 42px rgba(8, 17, 31, 0.34);
 }
 
-.reveal {
+.floating-whatsapp:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.site-footer {
+  padding: 34px 0 42px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--navy-950);
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.footer-inner {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-inner strong {
+  color: #fff;
+  font-size: 1.15rem;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+.footer-inner a {
+  text-decoration: none;
+}
+
+.footer-inner a:hover {
+  color: #fff;
+}
+
+.footer-inner small {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.reveal,
+.reveal-on-scroll.is-visible {
   animation: reveal 700ms ease both;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
 }
 
 @keyframes reveal {
@@ -634,6 +834,14 @@ output {
     align-items: center;
   }
 
+  .analyst-inner {
+    grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  }
+
+  .deliverables-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .fields-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -656,6 +864,10 @@ output {
   .choice-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .deliverables-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 430px) {
@@ -668,8 +880,11 @@ output {
   }
 
   .hero-inner,
+  .analyst-inner,
+  .deliverables-inner,
   .diagnostic-section,
-  .authority-inner {
+  .authority-inner,
+  .footer-inner {
     width: min(100% - 22px, 1120px);
   }
 
@@ -690,5 +905,9 @@ output {
     height: 54px;
     right: 14px;
     bottom: 14px;
+  }
+
+  .floating-whatsapp::before {
+    display: none;
   }
 }

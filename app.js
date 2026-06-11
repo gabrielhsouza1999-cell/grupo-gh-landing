@@ -45,7 +45,7 @@ function formatPhone(value) {
 function setLoading(isLoading) {
   submitButton.classList.toggle("loading", isLoading);
   submitButton.disabled = isLoading;
-  buttonText.textContent = isLoading ? "ENVIANDO..." : "ENVIAR DIAGNÓSTICO";
+  buttonText.textContent = isLoading ? "ENVIANDO..." : "RECEBER MINHA ANÁLISE";
   buttonLoader.hidden = !isLoading;
 }
 
@@ -236,11 +236,33 @@ function syncConditionalFields() {
 
 function configureWhatsapp() {
   const message = encodeURIComponent(
-    "Olá! Vim pelo Raio-X Empresarial da Grupo GH.\n\nGostaria de conversar com um especialista para entender melhor os possíveis gargalos da minha empresa e quais próximos passos fazem mais sentido.",
+    "Olá Gabriel!\n\nConheci o Raio-X Empresarial da Grupo GH e gostaria de entender melhor como funciona a análise.",
   );
   const url = `https://wa.me/${GABRIEL_WHATSAPP}?text=${message}`;
   whatsappLink.href = url;
   floatingWhatsapp.href = url;
+}
+
+function initScrollReveal() {
+  const revealNodes = document.querySelectorAll(".reveal-on-scroll");
+
+  if (!("IntersectionObserver" in window)) {
+    revealNodes.forEach((node) => node.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.16 },
+  );
+
+  revealNodes.forEach((node) => observer.observe(node));
 }
 
 async function submitToFormSubmit() {
@@ -337,6 +359,7 @@ syncConditionalFields();
 updateRangeFill();
 updateProgress();
 configureWhatsapp();
+initScrollReveal();
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
