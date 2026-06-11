@@ -1,4 +1,4 @@
-const CACHE_NAME = "grupo-gh-raio-x-v13";
+const CACHE_NAME = "grupo-gh-raio-x-v14";
 const ASSETS = [
   "./",
   "./index.html",
