@@ -19,6 +19,37 @@
     <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
     <link rel="preload" href="/hero-consultoria.png" as="image" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = true;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = true;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "558074687056202");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=558074687056202&ev=PageView&noscript=1"
+        alt=""
+      />
+    </noscript>
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <header class="site-header" aria-label="Topo da página">
@@ -26,7 +57,7 @@
         <img class="brand-logo" src="/grupo-gh-logo.png" alt="Logo Grupo GH" />
         <span>Grupo GH</span>
       </a>
-      <a class="header-link" href="#diagnostico">Começar</a>
+      <a class="header-link" href="#diagnostico" data-pixel-start>Começar</a>
     </header>
 
     <main>
@@ -54,7 +85,7 @@
               </p>
             </div>
             <div class="hero-actions">
-              <a class="button button-primary" href="#diagnostico">
+              <a class="button button-primary" href="#diagnostico" data-pixel-start>
                 COMEÇAR DIAGNÓSTICO
               </a>
               <span class="time-pill">⏱ Menos de 2 minutos</span>

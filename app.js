@@ -29,6 +29,12 @@ const requiredSelectors = [
   "#expectativaAnalise",
 ];
 
+function trackMetaEvent(eventName, params = {}) {
+  if (typeof fbq === "function") {
+    fbq("track", eventName, params);
+  }
+}
+
 function formatPhone(value) {
   const digits = value.replace(/\D/g, "").slice(0, 11);
   if (digits.length <= 2) return digits;
@@ -263,6 +269,9 @@ function showSuccess() {
   document.querySelector(".progress-area").hidden = true;
   successState.hidden = false;
   localStorage.removeItem(STORAGE_KEY);
+  trackMetaEvent("Lead", {
+    content_name: "Raio-X Empresarial Grupo GH",
+  });
   successState.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
@@ -306,7 +315,20 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     const target = document.querySelector(link.getAttribute("href"));
     if (!target) return;
     event.preventDefault();
+    if (link.dataset.pixelStart !== undefined) {
+      trackMetaEvent("ViewContent", {
+        content_name: "Começar diagnóstico",
+      });
+    }
     target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+
+[whatsappLink, floatingWhatsapp].forEach((link) => {
+  link.addEventListener("click", () => {
+    trackMetaEvent("Contact", {
+      content_name: "WhatsApp Grupo GH",
+    });
   });
 });
 
