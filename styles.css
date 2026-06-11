@@ -282,16 +282,6 @@ h1 {
   box-shadow: var(--shadow);
 }
 
-.photo-placeholder span {
-  padding: 10px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  background: rgba(5, 9, 20, 0.68);
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.86rem;
-  font-weight: 900;
-}
-
 .analyst-copy .eyebrow,
 .deliverables-section .eyebrow {
   color: var(--blue-600);
