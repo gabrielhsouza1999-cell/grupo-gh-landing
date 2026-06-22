@@ -1,4 +1,4 @@
-const DESTINATION_EMAIL = "contatogabrielhenriqueads@gmail.com";
+const DESTINATION_EMAIL = "grupoghcontato@gmail.com";
 const GABRIEL_WHATSAPP = "5516997529606";
 const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${DESTINATION_EMAIL}`;
 const STORAGE_KEY = "grupo-gh-raio-x-empresarial";
